@@ -1,5 +1,5 @@
-Summary:	Potrace is a utility for tracing a bitmap
-Summary(pl):	Potrace jest narzêdziem s³u¿acym do "trasowania" bitmap
+Summary:	Potrace - a utility for tracing a bitmap
+Summary(pl):	Potrace - narzêdzie s³u¿ace do "trasowania" bitmap
 Name:		potrace
 Version:	1.0
 Release:	1
@@ -8,6 +8,9 @@ Group:		Applications/Utilities
 Source0:	http://potrace.sourceforge.net/download/%{name}-%{version}.tar.gz
 # Source0-md5:	a56ef0209eaf1fecbfd8def988ae12e8
 URL:		http://potrace.sourceforge.net/
+BuildRequires:	autoconf
+BuildRequires:	automake
+BuildRequires:	zlib-devel
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %description
@@ -17,9 +20,10 @@ bitmap into a smooth, scalable image. The input is a portable bitmap
 (EPS).
 
 %description -l pl
-Potrace jest narzêdziem s³u¿±cym do konwertowania obrazów bitowych w
-wektorowe. Wej¶ciem dla programu jest przeno¶na bitmapa (PBM), a
-standardowym wyj¶ciem jest plik encapsulated PostScript (EPS).
+Potrace jest narzêdziem s³u¿±cym do "trasowania" bitmap, czyli
+konwertowania obrazów rastrowych do g³adkich i skalowanych obrazów
+wektorowych. Wej¶ciem dla programu jest przeno¶na bitmapa (PBM), a
+domy¶lnym wyj¶ciem jest plik encapsulated PostScript (EPS).
 
 %prep
 %setup -q
@@ -32,17 +36,21 @@ standardowym wyj¶ciem jest plik encapsulated PostScript (EPS).
 %configure \
 	--enable-a4 \
 	--enable-metric
-%{__make}
+
+%{__make} \
+	XCFLAGS="%{rpmcflags}"
 
 %install
 rm -rf $RPM_BUILD_ROOT
-%{__make} install DESTDIR=$RPM_BUILD_ROOT
+
+%{__make} install \
+	DESTDIR=$RPM_BUILD_ROOT
 
 %clean
 rm -rf $RPM_BUILD_ROOT
 
 %files
 %defattr(644,root,root,755)
-%doc AUTHORS README doc/potrace.pdf
+%doc AUTHORS ChangeLog README doc/potrace.pdf
 %attr(755,root,root) %{_bindir}/*
 %{_mandir}/man1/*
