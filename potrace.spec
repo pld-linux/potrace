@@ -29,7 +29,9 @@ standardowym wyj¶ciem jest plik encapsulated PostScript (EPS).
 %{__autoconf}
 %{__autoheader}
 %{__automake}
-%configure
+%configure \
+	--enable-a4 \
+	--enable-metric
 %{__make}
 
 %install
