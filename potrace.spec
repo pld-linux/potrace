@@ -37,8 +37,7 @@ domy¶lnym wyj¶ciem jest plik encapsulated PostScript (EPS).
 	--enable-a4 \
 	--enable-metric
 
-%{__make} \
-	CFLAGS="%{rpmcflags}"
+%{__make}
 
 %install
 rm -rf $RPM_BUILD_ROOT
