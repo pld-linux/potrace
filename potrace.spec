@@ -4,7 +4,7 @@ Name:		potrace
 Version:	1.5
 Release:	1
 License:	GPL
-Group:		Applications/Utilities
+Group:		Applications/Graphics
 Source0:	http://potrace.sourceforge.net/download/%{name}-%{version}.tar.gz
 # Source0-md5:	461146bda32fa71245881c1456490bad
 URL:		http://potrace.sourceforge.net/
