@@ -1,12 +1,12 @@
 Summary:	Potrace - a utility for tracing a bitmap
 Summary(pl):	Potrace - narzêdzie s³u¿ace do "trasowania" bitmap
 Name:		potrace
-Version:	1.3
+Version:	1.4
 Release:	1
 License:	GPL
 Group:		Applications/Utilities
 Source0:	http://potrace.sourceforge.net/download/%{name}-%{version}.tar.gz
-# Source0-md5:	726f1e063d3a131504aaf80e653ee053
+# Source0-md5:	f24018c4a7d65bf88fb55bbda543204d
 URL:		http://potrace.sourceforge.net/
 BuildRequires:	autoconf
 BuildRequires:	automake
@@ -51,6 +51,6 @@ rm -rf $RPM_BUILD_ROOT
 
 %files
 %defattr(644,root,root,755)
-%doc AUTHORS ChangeLog README doc/potrace.pdf
+%doc AUTHORS ChangeLog README 
 %attr(755,root,root) %{_bindir}/*
 %{_mandir}/man1/*
