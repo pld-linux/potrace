@@ -1,5 +1,5 @@
 Summary:	Potrace - a utility for tracing a bitmap
-Summary(pl):	Potrace - narzÍdzie s≥uø±ce do "trasowania" bitmap
+Summary(pl.UTF-8):   Potrace - narzƒôdzie s≈Çu≈ºƒÖce do "trasowania" bitmap
 Name:		potrace
 Version:	1.7
 Release:	1
@@ -19,11 +19,11 @@ bitmap into a smooth, scalable image. The input is a portable bitmap
 (PBM), and the default output is an encapsulated PostScript file
 (EPS).
 
-%description -l pl
-Potrace jest narzÍdziem s≥uø±cym do "trasowania" bitmap, czyli
-konwertowania obrazÛw rastrowych do g≥adkich i skalowanych obrazÛw
-wektorowych. Wej∂ciem dla programu jest przeno∂na bitmapa (PBM), a
-domy∂lnym wyj∂ciem jest plik encapsulated PostScript (EPS).
+%description -l pl.UTF-8
+Potrace jest narzƒôdziem s≈Çu≈ºƒÖcym do "trasowania" bitmap, czyli
+konwertowania obraz√≥w rastrowych do g≈Çadkich i skalowanych obraz√≥w
+wektorowych. Wej≈õciem dla programu jest przeno≈õna bitmapa (PBM), a
+domy≈õlnym wyj≈õciem jest plik encapsulated PostScript (EPS).
 
 %prep
 %setup -q
