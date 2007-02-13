@@ -1,5 +1,5 @@
 Summary:	Potrace - a utility for tracing a bitmap
-Summary(pl.UTF-8):   Potrace - narzędzie służące do "trasowania" bitmap
+Summary(pl.UTF-8):	Potrace - narzędzie służące do "trasowania" bitmap
 Name:		potrace
 Version:	1.7
 Release:	1
