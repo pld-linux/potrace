@@ -2,7 +2,7 @@ Summary:	Potrace - a utility for tracing a bitmap
 Summary(pl.UTF-8):	Potrace - narzędzie służące do "trasowania" bitmap
 Name:		potrace
 Version:	1.11
-Release:	1
+Release:	2
 License:	GPL v2+
 Group:		Applications/Graphics
 Source0:	http://potrace.sourceforge.net/download/%{name}-%{version}.tar.gz
@@ -30,7 +30,7 @@ domyślnym wyjściem jest plik encapsulated PostScript (EPS).
 Summary:	Header file for potrace library
 Summary(pl.UTF-8):	Plik nagłówkowy biblioteki potrace
 Group:		Development/Libraries
-Requires:	%{name} = %{version}-%{version}
+Requires:	%{name} = %{version}-%{release}
 
 %description devel
 Header file for potrace library.
@@ -42,7 +42,7 @@ Plik nagłówkowy biblioteki potrace.
 Summary:	Static potrace library
 Summary(pl.UTF-8):	Statyczna biblioteka potrace
 Group:		Development/Libraries
-Requires:	%{name}-devel = %{version}-%{version}
+Requires:	%{name}-devel = %{version}-%{release}
 
 %description static
 Static potrace library.
